@@ -1,0 +1,22 @@
+# DEPENDENCIES ----------------------------------------------------------------
+node_modules
+
+# COMPILED --------------------------------------------------------------------
+dist/
+docs/
+
+# IDE & FILES -----------------------------------------------------------------
+
+$RECYCLE.BIN/
+.DS_Store
+.idea
+Thumbs.db
+*~
+*.sw[mnpcod]
+*.log
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
