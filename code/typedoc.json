@@ -1,0 +1,18 @@
+{
+  "src": [
+    "./src/index.ts"
+  ],
+  "exclude": [".spec"],
+  "mode": "file",
+  "includeDeclarations": true,
+  "tsconfig": "tsconfig.json",
+  "out": "./docs",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "readme": "readme.md",
+  "name": "yavnotifier",
+  "ignoreCompilerErrors": true,
+  "plugin": ["typedoc-plugin-markdown"],
+  "listInvalidSymbolLinks": true
+}
