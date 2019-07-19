@@ -1,19 +1,11 @@
 import pkg from './package.json';
 import typescript from 'rollup-plugin-typescript2';
 import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
 import nodeResolve from 'rollup-plugin-node-resolve';
+import json from 'rollup-plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
 import { terser } from 'rollup-plugin-terser';
-
-function parseName(name) {
-  return name
-      .replace('@', '')
-      .replace('/', '-')
-      .split('-')
-      .map((x, i) => (i > 0 ? x[0].toUpperCase() + x.slice(1) : x))
-      .join('');
-}
 
 export default () => {
   const peerDependencies = [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})];
@@ -27,6 +19,7 @@ export default () => {
     extensions
   };
   const plugins = [
+    globals(),
     json({
       exclude: 'node_modules/**',
       preferConst: true,
@@ -54,6 +47,6 @@ export default () => {
       }
     ],
     plugins,
-    external,
+    external
   };
-}
+};

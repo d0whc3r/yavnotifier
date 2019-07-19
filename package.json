@@ -1,49 +1,74 @@
 {
-  "name": "yavnotifier",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": {
-    "email": "d0whc3r@gmail.com",
-    "name": "d0whc3r",
-    "url": "https://github.com/d0whc3r"
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "dev": "yarn yav:dev",
+    "test": "yarn yav:test",
+    "test:watch": "yarn yav:test:watch",
+    "build": "lerna run build",
+    "docs": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "clean": "npm-run-all --parallel clean:lerna clean:dist clean:deps",
+    "clean:lerna": "lerna clean --yes",
+    "clean:dist": "rimraf **/dist **/.rpt2_cache **/package-lock.json **/yarn.lock",
+    "clean:deps": "rimraf **/node_modules",
+    "format": "pretty-quick \"code/**/*.{js,ts}\" --write --staged",
+    "----YAVNOTIFIER----": "--------------------------------------------------------------------------------------------",
+    "yav:run": "cd code && npm run",
+    "yav:dev": "lerna run --scope @d0whc3r/yavnotifier --stream dev",
+    "yav:test": "lerna run --scope @d0whc3r/yavnotifier --stream test",
+    "yav:test:watch": "lerna run --scope @d0whc3r/yavnotifier --stream test:watch",
+    "yav:build": "lerna run --scope @d0whc3r/yavnotifier --stream build",
+    "yav:docs": "lerna run --scope @d0whc3r/yavnotifier --stream docs",
+    "----CI----": "--------------------------------------------------------------------------------------------------",
+    "clean:install": "npm ci",
+    "build:packages": "yarn build docs",
+    "test:packages": "yarn test",
+    "publish:packages": "lerna exec --no-bail --no-private --no-sort --stream -- '[ -n \"$(npm v . dist-tags.next)\" ] && npm dist-tag add ${LERNA_PACKAGE_NAME}@$(npm v . dist-tags.next) latest'",
+    "publish:packages:next": "lerna publish --dist-tag next --yes --no-progress"
   },
-  "repository": "https://github.com/d0whc3r/yavnotifier",
-  "homepage": "https://d0whc3r.github.io/yavnotifier",
-  "keywords": [
-    "vue",
-    "plugin",
-    "auth",
-    "authorization",
-    "authentication",
-    "login",
-    "roles",
-    "vuejs",
-    "vue2",
-    "typescript"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "code/*.{ts,js}|!code/dist/*": [
+      "npm run format"
+    ]
+  },
   "devDependencies": {
-    "boxen": "^4.1.0",
-    "chalk": "^2.4.2",
-    "latest-version": "^5.1.0",
-    "semver": "^6.2.0",
-    "typescript": "^3.5.3",
+    "@babel/core": "^7.5.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/jest": "~24.0.15",
+    "dts-bundle-generator": "^3.1.0",
+    "gh-pages": "^2.0.1",
+    "husky": "^3.0.1",
+    "jest": "~24.8.0",
+    "jest-cli": "~24.8.0",
+    "jest-junit": "^6.4.0",
+    "lerna": "^3.15.0",
+    "lint-staged": "^9.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "rimraf": "^2.6.3",
-    "rollup": "^1.16.6",
+    "rollup": "^1.17.0",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-execute": "^1.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-multi-entry": "^2.1.0",
     "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.0",
-    "rollup-plugin-typescript2": "^0.21.2",
-    "dts-bundle-generator": "^3.1.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/yavnotifier.cjs.js",
-  "module": "dist/yavnotifier.esm.js",
-  "sideeffects": false,
-  "types": "dist/index.d.ts"
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^2.0.10",
+    "typescript": "^3.5.3",
+    "vuepress": "^1.0.2"
+  }
 }

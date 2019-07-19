@@ -1,0 +1,49 @@
+{
+  "name": "@d0whc3r/yavnotifier",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "email": "d0whc3r@gmail.com",
+    "name": "d0whc3r",
+    "url": "https://github.com/d0whc3r"
+  },
+  "repository": "https://github.com/d0whc3r/yavnotifier",
+  "homepage": "https://d0whc3r.github.io/yavnotifier",
+  "keywords": [
+    "vue",
+    "plugin",
+    "auth",
+    "authorization",
+    "authentication",
+    "login",
+    "roles",
+    "vuejs",
+    "vue2",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "npm run clean && rollup -c && dts-bundle-generator -o dist/index.d.ts src/index.ts",
+    "clean": "rimraf dist .rpt2_cache",
+    "watch:rollup": "rollup -cw",
+    "docs": "rimraf docs && typedoc --theme markdown --mdEngine bitbucket",
+    "dev": "npm run clean && npm run watch:rollup",
+    "test": "jest --coverage --outputFile=../report/yavnotifier-unit-cov.json --json",
+    "test:watch": "jest --coverage --outputFile=../report/yavnotifier-unit-cov.json --json --watch"
+  },
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "latest-version": "^5.1.0",
+    "semver": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/semver": "^6.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/yavnotifier.cjs.js",
+  "module": "dist/yavnotifier.esm.js",
+  "sideeffects": false,
+  "types": "dist/index.d.ts"
+}
