@@ -10,16 +10,11 @@
   "repository": "https://github.com/d0whc3r/yavnotifier",
   "homepage": "https://d0whc3r.github.io/yavnotifier",
   "keywords": [
-    "vue",
-    "plugin",
-    "auth",
-    "authorization",
-    "authentication",
-    "login",
-    "roles",
-    "vuejs",
-    "vue2",
-    "typescript"
+    "notifier",
+    "registry",
+    "version",
+    "checker",
+    "private"
   ],
   "scripts": {
     "build": "npm run clean && rollup -c && dts-bundle-generator -o dist/index.d.ts src/index.ts",
