@@ -6,7 +6,7 @@
     "test": "yarn yav:test",
     "test:watch": "yarn yav:test:watch",
     "test:send-coverages": "yarn coverage:codecovs && yarn coverage:coveralls && yarn coverage:codacy",
-    "coverage:codecovs": "codecov -f report/*.json -t ${CODECOVS_TOKEN}",
+    "coverage:codecovs": "codecov -f report/coverage/jest/coverage-final.json -t ${CODECOVS_TOKEN}",
     "coverage:coveralls": "cat ./report/coverage/jest/lcov.info | coveralls",
     "coverage:codacy": "cat ./report/coverage/jest/lcov.info | codacy-coverage -p . --language typescript",
     "build": "lerna run build",

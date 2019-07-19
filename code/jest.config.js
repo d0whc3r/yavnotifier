@@ -9,18 +9,10 @@ module.exports = {
     ]
   ],
   testResultsProcessor: 'jest-sonar-reporter',
-  collectCoverage: false,
+  collectCoverage: true,
   collectCoverageFrom: ['src/*.ts'],
-  coverageReporters: ['lcov', 'text'],
+  coverageReporters: ['lcov', 'text', 'json'],
   coverageDirectory: '../report/coverage/jest',
-  coverageThreshold: {
-    global: {
-      branches: 0,
-      functions: 0,
-      lines: 0,
-      statements: 0
-    }
-  },
   transform: {
     '^.+\\.ts$': 'ts-jest'
   }
