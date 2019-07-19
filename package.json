@@ -22,7 +22,7 @@
     "yav:docs": "lerna run --scope @d0whc3r/yavnotifier --stream docs",
     "----CI----": "--------------------------------------------------------------------------------------------------",
     "clean:install": "npm ci",
-    "build:packages": "yarn build docs",
+    "build:packages": "npm-run-all build docs",
     "test:packages": "yarn test",
     "publish:packages": "lerna publish --yes",
     "publish:packages:next": "lerna publish --dist-tag next --yes --no-progress"
