@@ -79,7 +79,7 @@ publish-npm:
     - git checkout master
     - yarn build:packages
     - git add .
-    - "git commit -m 'docs: update documentation'\n[skip-ci]"
+    - "git commit -m 'docs: update documentation\n[skip-ci]'"
     - git push
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
     - yarn publish:packages
