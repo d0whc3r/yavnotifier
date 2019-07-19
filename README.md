@@ -36,7 +36,7 @@ import * as yav from '@d0whc3r/yavnotifier';
 })();
 ```
 
-![sample image](./code/sample.png)
+![sample image](./sample.png)
 
 [See documentation](./code/docs)
 
