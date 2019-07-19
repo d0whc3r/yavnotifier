@@ -36,6 +36,8 @@ import * as yav from '@d0whc3r/yavnotifier';
 })();
 ```
 
+![sample image](./sample.png)
+
 [See documentation](./docs)
 
 # :bar_chart: Project tests
