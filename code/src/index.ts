@@ -1,5 +1,4 @@
-// @ts-ignore
-import latestVersion = require('latest-version');
+import latestVersion from 'latest-version';
 import boxen from 'boxen';
 import * as semver from 'semver';
 import chalk from 'chalk';

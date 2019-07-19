@@ -40,5 +40,9 @@
   "main": "dist/yavnotifier.cjs.js",
   "module": "dist/yavnotifier.esm.js",
   "sideeffects": false,
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "jestSonar": {
+    "reportPath": "../report",
+    "reportFile": "yavnotifier-report.xml"
+  }
 }

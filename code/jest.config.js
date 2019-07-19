@@ -8,6 +8,7 @@ module.exports = {
       }
     ]
   ],
+  testResultsProcessor: 'jest-sonar-reporter',
   collectCoverage: false,
   collectCoverageFrom: ['src/*.ts'],
   coverageReporters: ['lcov', 'text'],
