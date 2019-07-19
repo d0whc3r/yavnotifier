@@ -18,7 +18,7 @@
 
 ▸ **isUpdated**(`name`: string, `version`: string): *`Promise<boolean>`*
 
-*Defined in [index.ts:22](https://github.com/d0whc3r/yavnotifier/blob/2fef350/code/src/index.ts#L22)*
+*Defined in [index.ts:21](https://github.com/d0whc3r/yavnotifier/blob/c3566b7/code/src/index.ts#L21)*
 
 Check if a package and version is the latest
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **latest**(`name`: string): *`Promise<string>`*
 
-*Defined in [index.ts:12](https://github.com/d0whc3r/yavnotifier/blob/2fef350/code/src/index.ts#L12)*
+*Defined in [index.ts:11](https://github.com/d0whc3r/yavnotifier/blob/c3566b7/code/src/index.ts#L11)*
 
 Get the latest version of a package
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **notify**(`name`: string, `version`: string, `message`: string): *`Promise<void>`*
 
-*Defined in [index.ts:34](https://github.com/d0whc3r/yavnotifier/blob/2fef350/code/src/index.ts#L34)*
+*Defined in [index.ts:33](https://github.com/d0whc3r/yavnotifier/blob/c3566b7/code/src/index.ts#L33)*
 
 Show a notification if there is a newest version for package
 
