@@ -30,15 +30,14 @@ export async function isUpdated(name: string, version: string) {
  * @param {string} message (optional) Message to show in the notification
  * @returns {Promise<void>}
  */
-export async function notify(name: string, version: string, message: string = 'Update available for package') {
+export async function notify(name: string, version: string, message = 'Update available for package') {
   try {
     const lversion = await latest(name);
     const update = semver.gt(lversion, version);
     if (update) {
       const diff = semver.diff(lversion, version);
-      const msg = `${message} ${chalk.underline.cyan.bold(name)} ${chalk.dim(version)}${chalk.reset(' → ')}${chalk.green(lversion)} ${chalk.gray(
-        `(${diff})`
-      )}`;
+      const diiTxt = `(${diff})`;
+      const msg = `${message} ${chalk.underline.cyan.bold(name)} ${chalk.dim(version)}${chalk.reset(' → ')}${chalk.green(lversion)} ${chalk.gray(diiTxt)}`;
 
       const box = boxen(msg, {
         padding: 1,

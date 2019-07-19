@@ -26,10 +26,10 @@
     "test:watch": "jest --coverage --outputFile=../report/yavnotifier-unit-cov.json --json --watch"
   },
   "dependencies": {
-    "boxen": "^4.1.0",
-    "chalk": "^2.4.2",
-    "latest-version": "^5.1.0",
-    "semver": "^6.2.0"
+    "boxen": "4.1.0",
+    "chalk": "2.4.2",
+    "latest-version": "5.1.0",
+    "semver": "6.2.0"
   },
   "devDependencies": {
     "@types/semver": "6.0.1"
