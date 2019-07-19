@@ -22,8 +22,8 @@
     "watch:rollup": "rollup -cw",
     "docs": "rimraf docs && typedoc --theme markdown --mdEngine bitbucket",
     "dev": "npm run clean && npm run watch:rollup",
-    "test": "jest --coverage --outputFile=../report/yavnotifier-unit-cov.json --json",
-    "test:watch": "jest --coverage --outputFile=../report/yavnotifier-unit-cov.json --json --watch"
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
   },
   "dependencies": {
     "boxen": "4.1.0",
