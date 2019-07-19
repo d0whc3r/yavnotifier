@@ -1,5 +1,5 @@
 {
-  "license": "private",
+  "license": "MIT",
   "scripts": {
     "postinstall": "lerna bootstrap",
     "dev": "yarn yav:dev",
