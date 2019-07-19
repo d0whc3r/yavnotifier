@@ -24,7 +24,7 @@
     "clean:install": "npm ci",
     "build:packages": "yarn build docs",
     "test:packages": "yarn test",
-    "publish:packages": "lerna exec --no-bail --no-private --no-sort --stream -- '[ -n \"$(npm v . dist-tags.next)\" ] && npm dist-tag add ${LERNA_PACKAGE_NAME}@$(npm v . dist-tags.next) latest'",
+    "publish:packages": "lerna publish --yes",
     "publish:packages:next": "lerna publish --dist-tag next --yes --no-progress"
   },
   "husky": {
