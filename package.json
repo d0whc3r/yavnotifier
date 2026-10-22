@@ -43,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "7.5.5",
+    "@babel/core": "7.29.6",
     "@commitlint/cli": "8.1.0",
     "@commitlint/config-conventional": "8.1.0",
     "@types/jest": "24.0.15",
