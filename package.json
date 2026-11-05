@@ -79,6 +79,6 @@
     "typedoc": "0.14.2",
     "typedoc-plugin-markdown": "2.0.10",
     "typescript": "3.5.3",
-    "vuepress": "1.0.2"
+    "vuepress": "1.9.10"
   }
 }
